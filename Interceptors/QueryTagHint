@@ -1,0 +1,23 @@
+using System.Data.Common;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+
+public class TaggedQueryCommandInterceptor : DbCommandInterceptor
+{
+    public override InterceptionResult<DbDataReader> ReaderExecuting(
+        DbCommand dbCommand,
+        CommandEventData commandEventData,
+        InterceptionResult<DbDataReader> result)
+    {
+        ManipulateCommand(dbCommand);
+
+        return result;
+    }
+
+    private static void ManipulateCommand(DbCommand dbCommand)
+    {
+        if (dbCommand.CommandText.StartsWith("-- Use hint: Robust Plan", StringComparison.Ordinal))
+        {
+            dbCommand.CommandText += "OPTION (ROBUST PLAN)";
+        }
+    }
+}

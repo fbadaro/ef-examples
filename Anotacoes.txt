@@ -1,0 +1,29 @@
+O tamanho maximo de um batch do EF por padrao e 42, ou seja num insert de 100 itens, ele ira 3 vezes no banco de dados.
+
+1 - 42
+2 - 84
+3 - 16
+
+
+O EF no auto relacionamento ou seja por definição da modelagem da classe no caso de 1-1, ele sempre ira criar um 
+shadowProperty sendo NOME-ENTIDADE + PK da tabela Pai
+
+Ex.
+
+public class Estado
+{
+    public int Id { get; set; }
+
+    public string Nome { get; set; } = default!;    
+}
+
+public class Governador
+{
+    public int Id { get; set; }
+
+    public string Nome { get; set; } = default!;
+
+    public Estado Estado { get; set; } = new();    
+}
+
+No exemplo acima uma coluna chamada EstadoId sera criada na tabela Governador
