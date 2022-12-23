@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JJNOyA1x0heJvrdV4YYqA6r4eFt7Hl3uEj52ONdV3me+1NoU+MHsB4NpNYgH8Q9qDX7AGVonBNo88E6kRwXT0w==",
+  "dgSpecHash": "ccmqdb4wF3P2rLCvxiHt1dZmo4RdRl6WsvI+9vvYieR9ja2PZ4y6vaaZw/Gmund6lTy/sFi0Tqmj7jZ2MGGFcg==",
   "success": true,
-  "projectFilePath": "D:\\Fabio\\Courses\\Eduardo Pires\\EFCore\\Dominando EFCore\\Curso\\DominandoEFCore.csproj",
+  "projectFilePath": "D:\\GitMe\\ef-examples\\DominandoEFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fbada\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\fbada\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

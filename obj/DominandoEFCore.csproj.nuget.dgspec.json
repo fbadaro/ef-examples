@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fabio\\Courses\\Eduardo Pires\\EFCore\\Dominando EFCore\\Curso\\DominandoEFCore.csproj": {}
+    "D:\\GitMe\\ef-examples\\DominandoEFCore.csproj": {}
   },
   "projects": {
-    "D:\\Fabio\\Courses\\Eduardo Pires\\EFCore\\Dominando EFCore\\Curso\\DominandoEFCore.csproj": {
+    "D:\\GitMe\\ef-examples\\DominandoEFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fabio\\Courses\\Eduardo Pires\\EFCore\\Dominando EFCore\\Curso\\DominandoEFCore.csproj",
+        "projectUniqueName": "D:\\GitMe\\ef-examples\\DominandoEFCore.csproj",
         "projectName": "DominandoEFCore",
-        "projectPath": "D:\\Fabio\\Courses\\Eduardo Pires\\EFCore\\Dominando EFCore\\Curso\\DominandoEFCore.csproj",
+        "projectPath": "D:\\GitMe\\ef-examples\\DominandoEFCore.csproj",
         "packagesPath": "C:\\Users\\fbada\\.nuget\\packages\\",
-        "outputPath": "D:\\Fabio\\Courses\\Eduardo Pires\\EFCore\\Dominando EFCore\\Curso\\obj\\",
+        "outputPath": "D:\\GitMe\\ef-examples\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
