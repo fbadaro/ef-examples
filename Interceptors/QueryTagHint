@@ -3,21 +3,21 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 
 public class TaggedQueryCommandInterceptor : DbCommandInterceptor
 {
-    public override InterceptionResult<DbDataReader> ReaderExecuting(
-        DbCommand dbCommand,
-        CommandEventData commandEventData,
-        InterceptionResult<DbDataReader> result)
-    {
-        ManipulateCommand(dbCommand);
+  public override InterceptionResult<DbDataReader> ReaderExecuting(
+      DbCommand dbCommand,
+      CommandEventData commandEventData,
+      InterceptionResult<DbDataReader> result)
+  {
+    ManipulateCommand(dbCommand);
 
-        return result;
-    }
+    return result;
+  }
 
-    private static void ManipulateCommand(DbCommand dbCommand)
+  private static void ManipulateCommand(DbCommand dbCommand)
+  {
+    if (dbCommand.CommandText.StartsWith("-- Use hint: Robust Plan", StringComparison.Ordinal))
     {
-        if (dbCommand.CommandText.StartsWith("-- Use hint: Robust Plan", StringComparison.Ordinal))
-        {
-            dbCommand.CommandText += "OPTION (ROBUST PLAN)";
-        }
+      dbCommand.CommandText += "OPTION (ROBUST PLAN)";
     }
+  }
 }

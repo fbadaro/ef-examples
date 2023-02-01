@@ -1,16 +1,16 @@
 public class Estado
 {
-    public int Id { get; set; }
+  public int Id { get; set; }
 
-    public string Nome { get; set; } = default!;
+  public string Nome { get; set; } = default!;
 
-    // Usando o FluentAPI
-    public Governador Governador { get; set; } = new();
+  // Usando o FluentAPI
+  public Governador Governador { get; set; } = new();
 
-    ICollection<Cidade> Cidades { get; set; } = new List<Cidade>();
+  ICollection<Cidade> Cidades { get; set; } = new List<Cidade>();
 
-    public Estado()
-    {
+  public Estado()
+  {
 
-    }
+  }
 }

@@ -13,22 +13,24 @@ SeedData.ResetDatabase(db);
 // ShadowProperties.InserWithShadowProperty(db);
 // ShadowProperties.FindWithShadowProperty(db);
 
-// var departamentos = db.Departamentos.AsNoTracking().Where(x => x.Status == Status.Enviado).ToList();
+// TODO: Testar Query gerada a partir do Enumeradores.
 
-// foreach (var item in departamentos)
-// {
-//     Console.WriteLine("------------------------------------");
-//     Console.WriteLine($"Departamento: {item.Descricao} \nHorario: {item.Horario.ToString("HH:mm")}");
+var departamentos = db.Departamentos.AsNoTracking().Where(x => x.Status == Status.Enviado).ToList();
 
-//     if (item.Funcionarios?.Any() ?? false)
-//     {
-//         foreach (var funcionario in item.Funcionarios)
-//         {
-//             Console.WriteLine($"\tFuncionario: {funcionario.Nome}");
-//         }
-//     }
-//     else
-//     {
-//         Console.WriteLine("\tNao existe funcionario para este Departamento");
-//     }
-// }
+foreach (var item in departamentos)
+{
+  Console.WriteLine("------------------------------------");
+  Console.WriteLine($"Departamento: {item.Descricao} \nHorario: {item.Horario.ToString("HH:mm")}");
+
+  if (item.Funcionarios?.Any() ?? false)
+  {
+    foreach (var funcionario in item.Funcionarios)
+    {
+      Console.WriteLine($"\tFuncionario: {funcionario.Nome}");
+    }
+  }
+  else
+  {
+    Console.WriteLine("\tNao existe funcionario para este Departamento");
+  }
+}
